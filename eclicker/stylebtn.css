@@ -1,0 +1,14 @@
+body {
+    font-family: 'Source Code Pro', monospace
+}
+button {
+    font-family: 'Source Code Pro', monospace
+}
+
+button:hover {
+    cursor:pointer
+}
+
+#btn:hover {
+    cursor:pointer
+}
