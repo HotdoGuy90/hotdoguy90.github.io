@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Linear+B">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Clicker - Game</title>
+</head>
+<body>
+    <div id="game">
+        <h1 id="display">You have clicked the E <span id="count">Unavailable</span> times.</h1>
+        <div onclick="eClick()" id="eButton">E</div>
+        <button onclick="saveGame()">Save Game</button>
+        <h1>Shop</h1>
+        <table border="1">
+            <tr>
+                <th>Item</th>
+                <th>Cost</th>
+                <th>Description</th>
+                <th>Purchaser</th>
+            </tr>
+            <tr>
+                <td>E Helper</td>
+                <td>50 Clicks</td>
+                <td>Collects 1 E every second.</td>
+                <td id="item1container"><button onclick="helperPurchase()" id="item1">Click To Purchase</button></td>
+            </tr>
+            <tr>
+                <td>E Protector</td>
+                <td>200 Clicks</td>
+                <td>Protects you from the evil Ts that try to defeat you. Works only once. (Can be repurchased)</td>
+                <td id="item2container"><button onclick="protectorPurchase()" id="item2">Click To Purchase</button></td>
+            </tr>
+            <tr>
+                <td>E Helper II</td>
+                <td>500 Clicks</td>
+                <td>Twice as fast as the first one!</td>
+                <td id="item3container">Locked</td>
+            </tr>
+            <tr>
+                <td>E Defender</td>
+                <td>700 Clicks</td>
+                <td>Makes the Ts attack less often. (7-8 minutes instead of 2-5)</td>
+                <td id="item4container"><button id="item4" onclick="defenderPurchase()">Click To Purchase</button></td>
+            </tr>
+            <tr>
+                <td>E Helper III</td>
+                <td>750 Clicks</td>
+                <td>EVEN FASTER!!!!</td>
+                <td id="item5container">Locked</td>
+            </tr>
+        </table>
+        <script src="main.js"></script>
+    </div>
+</body>
+</html>
