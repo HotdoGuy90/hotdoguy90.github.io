@@ -4,11 +4,16 @@ Ecount.innerHTML = E
 var isProtected = false
 var helper1
 var helper2
+var cost = 200
+const costDisplay = document.getElementById("cost")
+costDisplay.innerHTML = cost
 
 var params = new URLSearchParams(document.location.search)
 var json = decodeURIComponent(params.get("save"))
 if (json != null) {
     var jsonObj = JSON.parse(json)
+    cost = jsonObj.cost
+    costDisplay.innerHTML = cost
     E = jsonObj.ECount
     Ecount.innerHTML = E
     if (jsonObj.hasHelper) {
@@ -128,11 +133,11 @@ function helper3Purchase() {
 function protectorPurchase() {
     const item2 = document.getElementById("item2")
     const item2Container = document.getElementById("item2container")
-    if (E >= 200) {
+    if (E >= cost) {
         item2.remove()
         var newItem2 = document.createTextNode("Purchased!")
         item2Container.appendChild(newItem2)
-        E -= 200
+        E -= cost
         Ecount.innerHTML = E
         isProtected = true
     } else {
@@ -142,7 +147,6 @@ function protectorPurchase() {
 
 var waitforTs = setInterval(function() {
     if (!isProtected) {
-        clearInterval(waitforTs)
         window.alert("Game Over")
         const game = document.getElementById("game")
         game.remove()
@@ -154,9 +158,12 @@ var waitforTs = setInterval(function() {
         var newParagraphName = document.createTextNode("The Ts took over. You clicked The E " + E + " times when you died. Reload to start over!")
         newParagraph.appendChild(newParagraphName)
         document.querySelector("body").appendChild(newParagraph)
+                clearInterval(waitforTs)
     } else {
         window.alert("The Ts came but you were saved by your E Protector!")
         isProtected = false
+        cost += 100
+        costDisplay.innerHTML = cost
         const item2Container = document.getElementById("item2container")
         item2Container.innerHTML = ''
         var item2 = document.createElement("button")
@@ -199,6 +206,8 @@ function defenderPurchase() {
             } else {
                 window.alert("The Ts came but you were saved by your E Protector!")
                 isProtected = false
+                cost += 100
+                costDisplay.innerHTML = cost
                 const item2Container = document.getElementById("item2container")
                 item2Container.innerHTML = ''
                 var item2 = document.createElement("button")
@@ -252,6 +261,7 @@ function saveGame() {
     };
     const save = {
         "ECount": E,
+        "cost": cost,
         "hasHelper": hasHelper,
         "hasProtector": hasProtector,
         "hasHelper2": hasHelper2,
