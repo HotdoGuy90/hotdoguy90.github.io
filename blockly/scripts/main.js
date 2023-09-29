@@ -251,6 +251,9 @@ const toolbox = {
             "categorystyle": "procedure_category"
         },
         {
+            "kind": "sep"
+        },
+        {
             "kind": "category",
             "name": "Base64",
             "colour": 30,
