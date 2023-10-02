@@ -175,3 +175,10 @@ Blockly.JavaScript.forBlock['comment'] = function(block) {
     var code = '// ' + input + '\n'
     return code
 }
+
+Blockly.JavaScript.forBlock['item_get'] = function(block, generator) {
+    var vari = Blockly.JavaScript.nameDB_.getName(block.getFieldValue("FIELDVALUE"), Blockly.Names.NameType.VARIABLE) || '[]';
+    var num = block.getFieldValue('NUMBERVALUE') || '0';
+    var code = vari + '[' + num - 1 + ']';
+    return [code, Blockly.JavaScript.ORDER_ADDITION];
+}
