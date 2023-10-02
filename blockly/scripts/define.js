@@ -109,7 +109,30 @@ const comment = {
     "helpUrl": "about:blank"
 }
 
-Blockly.defineBlocksWithJsonArray([base64encode, base64decode, listappend, copytoclipboard, getcopiedtext, pastefromclipboard, comment])
+const getItemInList = {
+    "type": "item_get",
+    "message0": "From list %1 get item number %2",
+    "args0": [
+      {
+        "type": "field_variable",
+        "name": "FIELDVALUE",
+        "variable": "list"
+      },
+      {
+        "type": "field_number",
+        "name": "NUMBERVALUE",
+        "value": 1,
+        "min": 1,
+        "precision": 1
+      }
+    ],
+    "output": null,
+    "style": "list_block",
+    "toolTip": "Gets Item #",
+    "helpUrl": "https://www.w3schools.com/js/js_arrays.asp#:~:text=You%20can%20also%20create%20an%20array,%20and%20then%20provide%20the%20elements%3A"
+}
+
+Blockly.defineBlocksWithJsonArray([base64encode, base64decode, listappend, copytoclipboard, getcopiedtext, pastefromclipboard, comment, getItemInList])
 
 Blockly.JavaScript.forBlock['base64_encode'] = function(block, generator) {
     var input = generator.valueToCode(block, "VALUE", Blockly.JavaScript.ORDER_ADDITION) || '\'\''
