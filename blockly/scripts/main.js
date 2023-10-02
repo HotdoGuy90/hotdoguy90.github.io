@@ -16,6 +16,10 @@ const toolbox = {
                 },
                 {
                     "kind": "block",
+                    "type": "item_get"
+                },
+                {
+                    "kind": "block",
                     "type": "lists_repeat"
                 },
                 {
