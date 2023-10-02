@@ -179,6 +179,6 @@ Blockly.JavaScript.forBlock['comment'] = function(block) {
 Blockly.JavaScript.forBlock['item_get'] = function(block, generator) {
     var vari = Blockly.JavaScript.nameDB_.getName(block.getFieldValue("FIELDVALUE"), Blockly.Names.NameType.VARIABLE) || '[]';
     var num = block.getFieldValue('NUMBERVALUE') || '0';
-    var code = vari + '[' + Number(num - 1) + ']';
+    var code = vari + '[' + num + ']';
     return [code, Blockly.JavaScript.ORDER_ADDITION];
 }
