@@ -127,7 +127,7 @@ const getItemInList = {
       }
     ],
     "output": null,
-    "style": "list_block",
+    "style": "list_blocks",
     "toolTip": "Gets Item #",
     "helpUrl": "https://www.w3schools.com/js/js_arrays.asp#:~:text=You%20can%20also%20create%20an%20array,%20and%20then%20provide%20the%20elements%3A"
 }
@@ -179,6 +179,6 @@ Blockly.JavaScript.forBlock['comment'] = function(block) {
 Blockly.JavaScript.forBlock['item_get'] = function(block, generator) {
     var vari = Blockly.JavaScript.nameDB_.getName(block.getFieldValue("FIELDVALUE"), Blockly.Names.NameType.VARIABLE) || '[]';
     var num = block.getFieldValue('NUMBERVALUE') || '0';
-    var code = vari + '[' + num - 1 + ']';
+    var code = vari + '[' + Number(num - 1) + ']';
     return [code, Blockly.JavaScript.ORDER_ADDITION];
 }
