@@ -5,6 +5,13 @@ body {
 #parent {
     display: flex
 }
+#triangle {
+    border-right: 0;
+    border-top: 50%;
+    border-bottom: 50%;
+    border-left: 100%;
+    background-color: red;
+}
 .child {
     flex: 1;
     margin: 0
