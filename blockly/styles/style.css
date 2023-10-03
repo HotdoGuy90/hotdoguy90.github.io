@@ -6,13 +6,14 @@ body {
     display: flex
 }
 #triangle {
-    border-right: 0;
-    border-top: 50%;
-    border-bottom: 50%;
-    border-left: 100%;
-    background-color: red;
-    width: 50px;
-    height: 50px
+    width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 50px solid #ffffff;
+	border-bottom: 25px solid transparent;
+}
+button {
+    background-color: blue
 }
 .child {
     flex: 1;
