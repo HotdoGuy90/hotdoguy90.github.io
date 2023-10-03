@@ -13,7 +13,10 @@ body {
 	border-bottom: 25px solid transparent;
 }
 button {
-    background-color: blue
+    background-color: blue;
+	position: absolute;
+	left: 630px;
+	top: 330px
 }
 .child {
     flex: 1;
