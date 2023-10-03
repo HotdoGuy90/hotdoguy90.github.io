@@ -135,22 +135,22 @@ const getItemInList = {
 Blockly.defineBlocksWithJsonArray([base64encode, base64decode, listappend, copytoclipboard, getcopiedtext, pastefromclipboard, comment, getItemInList])
 
 Blockly.Python.forBlock['base64_encode'] = function(block, generator) {
-    var input = generator.valueToCode(block, "VALUE", Blockly.Python.ORDER_ADDITION) || '\'\''
+    var input = generator.valueToCode(block, "VALUE", Blockly.Python.ATOMIC) || '\'\''
     generator.definitions_['import_base64'] = 'import base64'
     var code = 'base64.b64encode(' + input + ')'
-    return [code, Blockly.Python.ORDER_ADDITION]
+    return [code, Blockly.Python.ATOMIC]
 }
 
 Blockly.Python.forBlock['base64_decode'] = function(block, generator) {
-    var input = generator.valueToCode(block, "VALUE", Blockly.Python.ORDER_ADDITION) || '\'\''
+    var input = generator.valueToCode(block, "VALUE", Blockly.Python.ATOMIC) || '\'\''
     generator.definitions_['import_base64'] = 'import base64'
     var code = 'base64.b64decode(' + input + ')'
-    return [code, Blockly.Python.ORDER_ADDITION]
+    return [code, Blockly.Python.ATOMIC]
 }
 
 Blockly.Python.forBlock['lists_append'] = function(block, generator) {
     var list = Blockly.Python.nameDB_.getName(block.getFieldValue("FIELDVALUE"), Blockly.Names.NameType.VARIABLE) || '[]'
-    var input = generator.valueToCode(block, "VALUE", Blockly.Python.ORDER_ADDITION) || '\'\''
+    var input = generator.valueToCode(block, "VALUE", Blockly.Python.ATOMIC) || '\'\''
     var code = list + '.append(' + input + ')\n'
     return code
 }
@@ -162,7 +162,7 @@ Blockly.Python.forBlock['text_copy'] = function(block, generator) {
         cmd='echo '+txt.strip()+'|pbcopy'
         return subprocess.check_call(cmd, shell=True)
     `)
-    var input = generator.valueToCode(block, "VALUE", Blockly.Python.ORDER_ADDITION) || '\'\''
+    var input = generator.valueToCode(block, "VALUE", Blockly.Python.ATOMIC) || '\'\''
     var code = copy2clip + '(' + input + ')\n'
     return code
 }
@@ -177,5 +177,5 @@ Blockly.Python.forBlock['item_get'] = function(block, generator) {
     var vari = Blockly.Python.nameDB_.getName(block.getFieldValue("FIELDVALUE"), Blockly.Names.NameType.VARIABLE) || '[]';
     var num = block.getFieldValue('NUMBERVALUE') || '0';
     var code = vari + '[' + Number(num - 1) + ']';
-    return [code, Blockly.Python.ORDER_ADDITION];
+    return [code, Blockly.Python.ATOMIC];
 }
