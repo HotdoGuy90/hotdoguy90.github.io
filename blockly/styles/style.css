@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 #parent {
-    display: flex
+    display: flex;
 }
 #triangle {
     width: 0;
@@ -11,12 +11,25 @@ body {
 	border-top: 25px solid transparent;
 	border-left: 50px solid #ffffff;
 	border-bottom: 25px solid transparent;
+	transform: translate(20%, 0%);
 }
 button {
     background-color: blue;
 	position: absolute;
 	left: 630px;
-	top: 330px
+	top: 300px;
+	border: 0;
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+}
+
+button:hover {
+	cursor: pointer
+}
+
+button:active {
+	background-color: red;
 }
 .child {
     flex: 1;
