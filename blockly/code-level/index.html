@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Level Player</title>
+    <style>
+        #parent {
+            display: flex;
+        }
+        .child {
+            flex: 1;
+            margin: 0;
+        }
+        canvas {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body style="padding: 0; margin: 0">
+    <button onclick="evalTest()">Click Here</button>
+    <div id="parent">
+        <div class="child" id="blocklyEditSpace" style="width: 600px; height: 480px"></div>
+        <canvas class="child" id="containingScreen" width="600" height="600"></canvas>
+    </div>
+
+    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+    <script src="https://unpkg.com/blockly/javascript_compressed.js"></script>
+    <script src="./scripts/define.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
