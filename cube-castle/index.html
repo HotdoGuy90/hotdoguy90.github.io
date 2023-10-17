@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Castle JS</title>
+    <style>
+        canvas {
+            border: 1px solid white;
+            background-color: black;
+        }
+        body {
+            font-family: 'Noto Sans Linear B'
+        }
+        button:hover {
+            cursor: pointer;
+            background-color: rgb(198, 198, 198);
+            border: 5;
+            border-radius: 10%;
+        }
+        button:active {
+            cursor: grabbing;
+        }
+    </style>
+</head>
+<body onload="rainbow();">
+    <h1>Cube Castle</h1>
+    <p>
+        Hello, and welcome to an amazing addition to the original <i>Cube Castle</i> which was written in Python. (You can find that <a href="https://trinket.io/embed/pygame/2e973cb031?outputOnly=true">here</a>) Because I wanted to go and remake it in Javascript. That is what this is. Enjoy! (The font used in the score is called <a href="TokyoMidnight.ttf" download>Tokyo Midnight.</a> Unfortunately I forgot the original creator) :(
+    </p>
+    <div id="container">
+        <button id="starterButton" onclick="loadgame();">Click Me to Start</button>
+    </div>
+    <script src="./game.js"></script>
+</body>
+</html>
