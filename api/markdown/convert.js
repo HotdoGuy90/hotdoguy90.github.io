@@ -1,12 +1,24 @@
 if (document.location.search) {
     var params = new URLSearchParams(document.location.search);
     var md = params.get("markdown");
-    var converter = new showdown.Converter();
     fetch(md)
         .then(file => file.text())
         .then((text) => {
-            document.getElementById("output").innerHTML=converter.makeHtml(text);
-            hljs.highlightAll();
+            fetch("https://api.github.com/markdown", {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/vnd.github+json',
+                    'X-Github-Api-Version': '2022-11-28'
+                },
+                body: JSON.stringify({
+                    text: text,
+                }),
+            })
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById("output").innerHTML = html;
+                    hljs.highlightAll();
+                })
         });
 } else {
     var err_msg = document.createElement("p");
