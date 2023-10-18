@@ -283,6 +283,7 @@ const workspace = Blockly.inject('blocklyId', {toolbox: toolbox})
 
 function generateCode(event) {
     const jsCode = Blockly.JavaScript.workspaceToCode(workspace)
+    hljs.highlightAll();
     document.getElementById('codeOutput').getElementsByTagName('code')[0].innerHTML = jsCode
 }
 
