@@ -282,3 +282,12 @@ function saveGame() {
     myLInK.click()
     URL.revokeObjectURL(downloadUrl)
 }
+
+document.body.addEventListener(
+    "keydown",
+    (event) => {
+        if (event.key == "e") {
+            eClick();
+        }
+    }
+)
