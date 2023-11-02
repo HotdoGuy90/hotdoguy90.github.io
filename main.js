@@ -4,6 +4,10 @@ fetch("https://api.ipify.org/?format=json")
 
 function runAPI() {
     var code = document.getElementById("code").value;
-    var APINAME = "https://hotdoguy90.github.io/api/?code=" + encodeURIComponent(code)
-    var APIWINDOW = window.open(APINAME, "_blank").focus()
+    if (code != 'i-know-games1') {
+        var APINAME = "https://hotdoguy90.github.io/api/?code=" + encodeURIComponent(code)
+        var APIWINDOW = window.open(APINAME, "_blank").focus()
+    } else {
+        document.location.href = "https://hotdoguy90.github.io/i-dont-know-games";
+    }
 }
