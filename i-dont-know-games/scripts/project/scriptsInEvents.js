@@ -15,7 +15,7 @@ const scriptsInEvents = {
 		
 		if (!document.getElementById("linkd")) {
 			let linkd = document.createElement("a");
-			document.body.appendChild(link);
+			document.body.appendChild(linkd);
 			linkd.href = "https://hotdoguy90.github.io/";
 			linkd.innerText = "Click here just in case you want to go back to the homepage.";
 			linkd.id = "linkd";
