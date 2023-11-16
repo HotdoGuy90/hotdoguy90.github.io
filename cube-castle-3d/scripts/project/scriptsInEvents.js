@@ -55,6 +55,7 @@ const scriptsInEvents = {
 
 	async EventSheet1_Event11_Act1(runtime, localVars)
 	{
+		runtime.globalVars.ScoreNum = 0;
 		var playAgain = window.confirm("Game Over. Your score was: " + runtime.globalVars.ScoreNum + " points. Would you like to play again?");
 		
 		if (playAgain == true) {
