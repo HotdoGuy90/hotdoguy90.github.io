@@ -4,4 +4,4 @@ setInterval(() => {
     .then(output => {
         document.getElementById("time").innerHTML = "You have " + output + " until August 12, 2036.";
     })
-}, 1)
+}, 1000)

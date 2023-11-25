@@ -32,7 +32,7 @@ if (p) {
     var dateString = `${newyears}y ${newmons}m ${newdays}d ${newhours}h ${newmins}mins ${newsecs}s ${time}ms`;
     var dateJSON = {
         y: newyears,
-        m: newmins,
+        m: newmons,
         d: newdays,
         h: newhours,
         mu: newmins,
