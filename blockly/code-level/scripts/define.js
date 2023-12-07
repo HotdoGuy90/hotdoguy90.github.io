@@ -8,54 +8,39 @@ var move1 = {
     "helpUrl": ""
 };
 
-var move2 = {
-    "type": "walk_left",
-    "message0": "Walk 1 Left",
+var rleft = {
+    "type": "rotate_left",
+    "message0": "Rotate 90 Degrees Left",
     "previousStatement": null,
     "nextStatement": null,
     "style": "list_blocks",
-    "tooltip": "Moves character 1 left.",
+    "tooltip": "",
     "helpUrl": ""
-};
+  }
 
-var move3 = {
-    "type": "walk_backward",
-    "message0": "Walk 1 Backward",
+var rright = {
+    "type": "rotate_right",
+    "message0": "Rotate 90 Degrees Right",
     "previousStatement": null,
     "nextStatement": null,
     "style": "list_blocks",
-    "tooltip": "Moves character 1 back.",
+    "tooltip": "",
     "helpUrl": ""
 };
 
-var move4 = {
-    "type": "walk_right",
-    "message0": "Walk 1 Right",
-    "previousStatement": null,
-    "nextStatement": null,
-    "style": "list_blocks",
-    "tooltip": "Moves character 1 right.",
-    "helpUrl": ""
-};
-
-Blockly.defineBlocksWithJsonArray([move1, move2, move3, move4])
+Blockly.defineBlocksWithJsonArray([move1, rleft, rright])
 
 Blockly.JavaScript.forBlock['walk_forward'] = function (block, generator) {
-    var code = 'if (player.y < canvas.height - player.boxHeight){player.y += player.boxHeight;}';
+    var code = 'player.x += player.boxWidth * Math.cos(player.angle * Math.PI / 180);\nplayer.y += player.boxHeight * Math.sin(player.angle * Math.PI / 180)';
     return code;
 };
 
-Blockly.JavaScript.forBlock['walk_left'] = function (block, generator) {
-    var code = 'if (player.x < canvas.width - player.boxWidth){player.x += player.boxWidth;}';
+Blockly.JavaScript.forBlock['rotate_left'] = function (block, generator) {
+    var code = 'player.angle -= 90';
     return code;
 };
 
-Blockly.JavaScript.forBlock['walk_backward'] = function (block, generator) {
-    var code = 'if (player.y > 0){player.y -= player.boxHeight;}';
+Blockly.JavaScript.forBlock['rotate_right'] = function (block, generator) {
+    var code = 'player.angle += 90';
     return code;
 };
-
-Blockly.JavaScript.forBlock['walk_right'] = function (block, generator) {
-    var code = 'if (player.x > 0){player.x -= player.boxWidth;}';
-    return code;
-}

@@ -14,7 +14,8 @@ let player = {
     x: 0,
     y: 0,
     boxWidth: 75,
-    boxHeight: 75
+    boxHeight: 75,
+    angle: 0
 }
 
 let finishLevel = {
@@ -46,20 +47,12 @@ const toolboxPlayerMove = {
         },
         {
             "kind": "block",
-            "type": "walk_left"
+            "type": "rotate_left"
         },
         {
             "kind": "block",
-            "type": "walk_backward"
-        },
-        {
-            "kind": "block",
-            "type": "walk_right"
-        },
-        {
-            "kind": "block",
-            "type": "controls_repeat"
-        },
+            "type": "rotate_right"
+        }
     ]
 }
 
