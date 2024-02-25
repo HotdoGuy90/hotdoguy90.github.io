@@ -1,0 +1,80 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "net.hotdoguy90",
+    "module": "JComplex",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "JComplex-1.0.0.jar",
+          "url": "JComplex-1.0.0.jar",
+          "size": 1471,
+          "sha512": "9219145253e1f926d54cd8f458e0ed86b2c2689ec08937a814fe3d5652f33230fe4cfb6259af8279cb24903768384be260c727b516922d50c60005a542dc69ad",
+          "sha256": "3f0743f3032eb8c8d0023f56fab736998beb24a22728127d641ac6aa36bf88ae",
+          "sha1": "f23f5cf1310f559a517d3c6156724d1e2fb40bf4",
+          "md5": "ea553a5c10d7c34bf24389a401a370d0"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "JComplex-1.0.0.jar",
+          "url": "JComplex-1.0.0.jar",
+          "size": 1471,
+          "sha512": "9219145253e1f926d54cd8f458e0ed86b2c2689ec08937a814fe3d5652f33230fe4cfb6259af8279cb24903768384be260c727b516922d50c60005a542dc69ad",
+          "sha256": "3f0743f3032eb8c8d0023f56fab736998beb24a22728127d641ac6aa36bf88ae",
+          "sha1": "f23f5cf1310f559a517d3c6156724d1e2fb40bf4",
+          "md5": "ea553a5c10d7c34bf24389a401a370d0"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "JComplex-1.0.0-sources.jar",
+          "url": "JComplex-1.0.0-sources.jar",
+          "size": 883,
+          "sha512": "9c04f35c595594dff7342001a220fb4a87793a2a4389516109e482e6e4eb23a4f1dac762202eb7643338e3ca313b295685ec0529a0fd4f1194301a0633995016",
+          "sha256": "25f4330beafab5f6a346c9cc55492a6311322791bc89bfe87206dd72ea526447",
+          "sha1": "0856442559e44468a6bf0e8c458fa3cc6fc114be",
+          "md5": "94b91152cfc44a0d7bf261f3876539c8"
+        }
+      ]
+    }
+  ]
+}
